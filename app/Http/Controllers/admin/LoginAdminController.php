@@ -34,9 +34,10 @@ class LoginAdminController extends Controller
             return redirect()->route('admin.dashboard')
                 ->with('success', 'Đăng nhập thành công!');
         }
+        
         return redirect()->back()
             ->withInput()
-            ->with('error', 'Thông tin đăng nhập không chính xác!');
+            ->with('error', 'Tên đăng nhập hoặc mật khẩu Admin không chính xác!');
     }
     public function logout(Request $request)
     {

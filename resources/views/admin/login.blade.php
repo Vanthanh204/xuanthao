@@ -51,13 +51,13 @@
                             <form action="{{ route('admin.login-account') }}" method="POST" id="login-form-admin">
                                 @csrf
                                 @if(session('error'))
-                                    <div class="alert alert-danger text-center">
+                                    <div class="alert alert-danger text-center" style="display: block !important;">
                                         {{ session('error') }}
                                     </div>
                                 @endif
 
                                 @if(session('success'))
-                                    <div class="alert alert-success text-center">
+                                    <div class="alert alert-success text-center" style="display: block !important;">
                                         {{ session('success') }}
                                     </div>
                                 @endif
