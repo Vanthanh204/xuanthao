@@ -69,7 +69,11 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "yoeunes/toastr",
+                "php-flasher/flasher-laravel",
+                "php-flasher/flasher-toastr-laravel"
+            ]
         }
     },
     "config": {
