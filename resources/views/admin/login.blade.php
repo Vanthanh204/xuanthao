@@ -11,6 +11,8 @@
 
     <!-- CSS login -->
     <link rel="stylesheet" href="{{ asset('clients/assets/css_login/style.css') }}">
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 </head>
 <a href="{{ url('/') }}" style="
     position: fixed; 
@@ -92,11 +94,13 @@
         </div>
     </section>
 </div>
-<script src="{{ asset('clients/assets/css_login/js/jquery.min.js') }}"></script>
-<script src="{{ asset('clients/assets/css_login/js/popper.js') }}"></script>
-<script src="{{ asset('clients/assets/css_login/js/bootstrap.min.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
 <script src="{{ asset('clients/assets/css_login/js/main.js') }}"></script>
 <script src="{{ asset('clients/assets/js/custom.js') }}"></script>
+
 <style>
     #message {
         white-space: nowrap;

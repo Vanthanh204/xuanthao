@@ -15,23 +15,23 @@ $(document).ready(function () {
 
     //--- DATETIMEPICKER ---
     $(document).ready(function () {
+        if ($.fn.datetimepicker) {
+            $('#start_date').datetimepicker({
+                timepicker: false,
+                format: 'd-m-Y'
+            });
 
-    $('#start_date').datetimepicker({
-        timepicker: false,
-        format: 'd-m-Y'
-    });
-
-    $('#end_date').datetimepicker({
-        timepicker: false,
-        format: 'd-m-Y'
-    });
-    
-     $('.datetimepicker').datetimepicker({
-        format: 'd-m-Y',
-        timepicker: false,
-        minDate: 0 // 
-    });
-
+            $('#end_date').datetimepicker({
+                timepicker: false,
+                format: 'd-m-Y'
+            });
+            
+            $('.datetimepicker').datetimepicker({
+                format: 'd-m-Y',
+                timepicker: false,
+                minDate: 0 
+            });
+        }
     });
 
 
