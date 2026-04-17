@@ -54,4 +54,4 @@
     <link href="{{ asset('admin/assets/css/custom-css.css') }}" rel="stylesheet" />
 </head>
 
-<body class="nav-md"></body>
+<body class="nav-md">

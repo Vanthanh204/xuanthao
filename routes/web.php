@@ -77,6 +77,8 @@ Route::post('/momo-success', [CheckoutController::class, 'paymentSuccess']);
 //
 Route::get('/tour_booked', [TourBookedController::class, 'index'])
     ->name('tour_booked');
+Route::get('/booking/cancel/{id}', [TourBookedController::class, 'cancelBooking'])
+    ->name('booking.cancel');
 
 Route::post('/review', [ChiTietToursController::class, 'store'])
     ->name('review');

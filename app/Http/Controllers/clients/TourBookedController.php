@@ -53,4 +53,30 @@ class TourBookedController extends Controller
         return view('clients.tour_booked', compact('title','bookings'));
     }
 
+    public function cancelBooking($id)
+    {
+        $userID = session('login_user_id');
+        if (!$userID) {
+            return redirect('/login')->with('error', 'Vui lòng đăng nhập');
+        }
+
+        $booking = DB::table('booking')
+            ->where('bookingID', $id)
+            ->where('userID', $userID)
+            ->first();
+
+        if (!$booking) {
+            return redirect()->back()->with('error', 'Không tìm thấy đơn đặt tour!');
+        }
+
+        if ($booking->status == 'cancelled') {
+            return redirect()->back()->with('warning', 'Tour này đã được hủy trước đó.');
+        }
+
+        DB::table('booking')
+            ->where('bookingID', $id)
+            ->update(['status' => 'cancelled']);
+
+        return redirect()->back()->with('success', 'Hủy tour thành công!');
+    }
 }
